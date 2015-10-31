@@ -1,0 +1,40 @@
+{
+  "name": "stylelint-selector-bem-pattern",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidtheclark/stylelint-selector-bem-pattern.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "stylelint",
+    "stylelint-plugin",
+    "css",
+    "nesting",
+    "linter",
+    "bem"
+  ],
+  "author": "David Clark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidtheclark/stylelint-selector-bem-pattern/issues"
+  },
+  "homepage": "https://github.com/davidtheclark/stylelint-selector-bem-pattern#readme",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "postcss-bem-linter": "^2.1.0",
+    "stylelint": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "1.8.0",
+    "stylelint-rule-tester": "^0.3.0",
+    "tape": "4.2.2"
+  }
+}
