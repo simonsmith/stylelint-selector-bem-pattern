@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "eslint": "1.8.0",
+    "postcss": "^5.0.10",
     "stylelint-rule-tester": "^0.3.0",
     "tape": "4.2.2"
   }

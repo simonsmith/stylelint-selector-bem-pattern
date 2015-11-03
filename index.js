@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var Result = require('postcss/lib/result');
 var utils = require('stylelint').utils;
 var bemLinter = require('postcss-bem-linter');
 
@@ -39,9 +40,9 @@ module.exports = function(options) {
     });
     if (!validOptions) return;
 
-    var bemLinterWarnings = bemLinter.process(root.toString(), _.assign({}, options, {
-      from: root.source.input.file || root.source.input.id,
-    })).warnings();
+    var bemLinterResult = new Result();
+    bemLinter(options)(root, bemLinterResult)
+    var bemLinterWarnings = bemLinterResult.warnings();
 
     bemLinterWarnings.forEach(function(warning) {
       utils.report({
