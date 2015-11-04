@@ -2,7 +2,7 @@ var _ = require('lodash');
 var utils = require('stylelint').utils;
 var bemLinter = require('postcss-bem-linter');
 
-var ruleName = 'stylelint-selector-bem-pattern';
+var ruleName = 'selector-bem-pattern';
 
 var optionsSchema = {
   preset: ['suit', 'bem'],
