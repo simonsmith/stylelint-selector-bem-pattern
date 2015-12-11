@@ -1,10 +1,10 @@
 var ruleTester = require('stylelint-rule-tester');
-var rule = require('..');
+var selectorBemPattern = require('..');
 
 // Just a couple of quick tests to ensure postcss-bem-linter
 // is getting the hard work done
 
-var testRule = ruleTester(rule, rule.ruleName);
+var testRule = ruleTester(selectorBemPattern.rule, selectorBemPattern.ruleName);
 
 testRule({ preset: 'suit' }, function(tr) {
   tr.ok('/** @define Foo */ .Foo {}');

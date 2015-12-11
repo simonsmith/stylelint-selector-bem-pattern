@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "test": "tape test"
   },
   "repository": {
@@ -30,12 +31,12 @@
   "dependencies": {
     "lodash": "^3.10.1",
     "postcss-bem-linter": "^2.1.0",
-    "stylelint": "^2.0.0"
+    "stylelint": "^3.0.2"
   },
   "devDependencies": {
-    "eslint": "1.8.0",
+    "eslint": "^1.10.3",
     "postcss": "^5.0.10",
-    "stylelint-rule-tester": "^0.3.0",
+    "stylelint-rule-tester": "^0.6.1",
     "tape": "4.2.2"
   }
 }

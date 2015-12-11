@@ -1,6 +1,6 @@
 var _ = require('lodash');
 var Result = require('postcss/lib/result');
-var utils = require('stylelint').utils;
+var stylelint = require('stylelint');
 var bemLinter = require('postcss-bem-linter');
 
 var ruleName = 'selector-bem-pattern';
@@ -30,11 +30,11 @@ var optionsSchema = {
   ],
 };
 
-module.exports = function(options) {
+module.exports = stylelint.createPlugin(ruleName, function(options) {
   options = options || { preset: 'suit' };
 
   return function(root, result) {
-    var validOptions = utils.validateOptions(result, ruleName, {
+    var validOptions = stylelint.utils.validateOptions(result, ruleName, {
       actual: options,
       possible: optionsSchema,
     });
@@ -45,7 +45,7 @@ module.exports = function(options) {
     var bemLinterWarnings = bemLinterResult.warnings();
 
     bemLinterWarnings.forEach(function(warning) {
-      utils.report({
+      stylelint.utils.report({
         ruleName: ruleName,
         result: result,
         node: warning.node,
@@ -55,7 +55,7 @@ module.exports = function(options) {
       });
     });
   };
-};
+});
 
 function isStringOrRegExp(x) {
   return _.isString(x) || _.isRegExp(x);
