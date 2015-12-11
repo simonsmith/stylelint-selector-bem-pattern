@@ -10,18 +10,20 @@ To learn more about postcss-bem-linter, please read [that module's documentation
 npm install stylelint-selector-bem-pattern
 ```
 
+Be warned: v0.2.0+ is only compatible with stylelint v3+. For earlier version of stylelint, use earlier verisons of this.
+
 ## Usage
 
-Add it to your stylelint config `plugins` object, then add it to your rules,
+Add it to your stylelint config `plugins` array, then add `"selector-bem-pattern"` to your rules,
 specifying the severity and your postcss-bem-linter settings as the primary option.
 Like so:
 
 ```js
 // .stylelintrc
 {
-  "plugins": {
-    "selector-bem-pattern": "stylelint-selector-bem-pattern"
-  },
+  "plugins": [
+    "stylelint-selector-bem-pattern"
+  ],
   "rules": {
     // ...
     "selector-bem-pattern": [2, {
