@@ -10,7 +10,7 @@ To learn more about postcss-bem-linter, please read [that module's documentation
 npm install stylelint-selector-bem-pattern
 ```
 
-Be warned: v0.2.0+ is only compatible with stylelint v3+. For earlier version of stylelint, use earlier verisons of this.
+Be warned: v0.2.0+ is only compatible with stylelint v3+. For earlier version of stylelint, use earlier versions of this.
 
 ## Usage
 
@@ -26,14 +26,14 @@ Like so:
   ],
   "rules": {
     // ...
-    "selector-bem-pattern": [2, {
+    "selector-bem-pattern": {
       "componentName": "[A-Z]+",
       "componentSelectors": {
         "initial": "^\\.{componentName}(?:-[a-z]+)?$",
         "combined": "^\\.combined-{componentName}-[a-z]+$"
       },
       "utilitySelectors": "^\.util-[a-z]+$"
-    }],
+    },
     // ...
   }
 }
