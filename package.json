@@ -29,9 +29,9 @@
   },
   "homepage": "https://github.com/davidtheclark/stylelint-selector-bem-pattern#readme",
   "dependencies": {
-    "lodash": "^3.10.0",
+    "lodash": ">=3.10.0",
     "postcss-bem-linter": "^2.1.0",
-    "stylelint": "^3.0.2"
+    "stylelint": ">=3.0.2"
   },
   "devDependencies": {
     "eslint": "^1.10.3",
