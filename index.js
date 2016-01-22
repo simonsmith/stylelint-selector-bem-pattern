@@ -7,9 +7,7 @@ var ruleName = 'selector-bem-pattern';
 
 var optionsSchema = {
   preset: ['suit', 'bem'],
-  presetOptions: {
-    namespace: [_.isString],
-  },
+  presetOptions: function() { return true; }, // Can't currently validated `presetOptions`
   componentName: [isStringOrRegExp],
   componentSelectors: [function(pattern) {
     if (isStringOrFunction(pattern)) return true;

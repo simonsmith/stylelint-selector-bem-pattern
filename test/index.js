@@ -38,3 +38,22 @@ testRule({
     column: 3,
   });
 });
+
+testRule({
+  preset: 'suit',
+  presetOptions: {
+    namespace: 'qz',
+  },
+}, function(tr) {
+  tr.ok('/** @define Foo */\n  .qz-Foo--thing {}');
+  tr.notOk('/** @define Foo */\n  .Foo-thing {}', {
+    message: 'Invalid component selector ".Foo-thing" (selector-bem-pattern)',
+    line: 2,
+    column: 3,
+  });
+  tr.notOk('/** @define Foo */\n  .qz-Boooo-thing {}', {
+    message: 'Invalid component selector ".qz-Boooo-thing" (selector-bem-pattern)',
+    line: 2,
+    column: 3,
+  });
+});
