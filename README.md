@@ -34,7 +34,7 @@ Like so:
         "initial": "^\\.{componentName}(?:-[a-z]+)?$",
         "combined": "^\\.combined-{componentName}-[a-z]+$"
       },
-      "utilitySelectors": "^\.util-[a-z]+$"
+      "utilitySelectors": "^\\.util-[a-z]+$"
     },
     // ...
   }
