@@ -17,7 +17,12 @@ Be warned: v0.2.0+ is only compatible with stylelint v3+. For earlier version of
 ## Usage
 
 Add it to your stylelint config `plugins` array, then add `"selector-bem-pattern"` to your rules,
-specifying the severity and your postcss-bem-linter settings as the primary option.
+specifying your postcss-bem-linter settings as the primary option.
+
+Even though postcss-bem-linter has the default setting of `{ preset: 'suit' }`, this plugin has
+no default setting: if you want to use the SUIT preset, you must pass `{ preset: 'suit' }`,
+and the rule will not work if you do not pass a primary option object.
+
 Like so:
 
 ```js

@@ -1,5 +1,9 @@
 # Changelog
 
+## Head
+
+- Remove code for default options that didn't work anyway.
+
 ## 0.2.1
 
 - Fix option-validating bug that errored when `presetOptions` were passed.

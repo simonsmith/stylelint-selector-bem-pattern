@@ -29,8 +29,6 @@ var optionsSchema = {
 };
 
 module.exports = stylelint.createPlugin(ruleName, function(options) {
-  options = options || { preset: 'suit' };
-
   return function(root, result) {
     var validOptions = stylelint.utils.validateOptions(result, ruleName, {
       actual: options,

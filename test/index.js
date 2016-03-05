@@ -57,3 +57,7 @@ testRule({
     column: 3,
   });
 });
+
+testRule(null, function(tr) {
+  tr.notOk('a {}', 'Expected option value for rule "selector-bem-pattern"');
+});
