@@ -1,6 +1,6 @@
 # Changelog
 
-## Head
+## 0.2.2
 
 - Remove code for default options that didn't work anyway.
 
