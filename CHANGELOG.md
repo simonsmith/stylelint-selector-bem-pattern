@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.3
+
+- Move PostCSS from `devDependencies` to `dependencies`.
+
 ## 0.2.2
 
 - Remove code for default options that didn't work anyway.
