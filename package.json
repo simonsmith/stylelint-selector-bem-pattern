@@ -30,12 +30,12 @@
   "homepage": "https://github.com/davidtheclark/stylelint-selector-bem-pattern#readme",
   "dependencies": {
     "lodash": ">=3.10.0",
+    "postcss": "^5.0.19",
     "postcss-bem-linter": "^2.1.0",
     "stylelint": ">=3.0.2"
   },
   "devDependencies": {
     "eslint": "^1.10.3",
-    "postcss": "^5.0.10",
     "stylelint-rule-tester": "^0.6.1"
   }
 }
