@@ -36,6 +36,6 @@
   },
   "devDependencies": {
     "eslint": "^1.10.3",
-    "stylelint-rule-tester": "^0.6.1"
+    "stylelint-test-rule-tape": "^0.2.0"
   }
 }
