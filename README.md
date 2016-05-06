@@ -16,7 +16,7 @@ Be warned: v0.2.0+ is only compatible with stylelint v3+. For earlier version of
 
 ## Usage
 
-Add it to your stylelint config `plugins` array, then add `"selector-bem-pattern"` to your rules,
+Add it to your stylelint config `plugins` array, then add `"/selector-bem-pattern"` to your rules,
 specifying your postcss-bem-linter settings as the primary option.
 
 Even though postcss-bem-linter has the default setting of `{ preset: 'suit' }`, this plugin has
@@ -33,7 +33,7 @@ Like so:
   ],
   "rules": {
     // ...
-    "selector-bem-pattern": {
+    "/selector-bem-pattern": {
       "componentName": "[A-Z]+",
       "componentSelectors": {
         "initial": "^\\.{componentName}(?:-[a-z]+)?$",
