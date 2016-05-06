@@ -2,7 +2,7 @@
 
 ## Head
 
-- Namespaced rule name.
+- Namespace rule name.
 
 ## 0.2.3
 
