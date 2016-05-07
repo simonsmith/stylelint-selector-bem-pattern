@@ -1,5 +1,9 @@
 # Changelog
 
+## Head
+
+- Namespace rule name.
+
 ## 0.2.3
 
 - Move PostCSS from `devDependencies` to `dependencies`.

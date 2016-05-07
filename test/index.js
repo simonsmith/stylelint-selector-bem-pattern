@@ -17,13 +17,13 @@ testRule(selectorBemPattern.rule, {
   reject: [
     {
       code: '/** @define Foo */ .false {}',
-      message: 'Invalid component selector ".false" (selector-bem-pattern)',
+      message: 'Invalid component selector ".false" (' + selectorBemPattern.ruleName + ')',
       line: 1,
       column: 20,
     },
     {
       code: '/** @define Foo */ .Foo_bar {}',
-      message: 'Invalid component selector ".Foo_bar" (selector-bem-pattern)',
+      message: 'Invalid component selector ".Foo_bar" (' + selectorBemPattern.ruleName + ')',
       line: 1,
       column: 20,
     },
@@ -45,13 +45,13 @@ testRule(selectorBemPattern.rule, {
   reject: [
     {
       code: '/** @define Foo2 */',
-      message: 'Invalid component name in definition /*/** @define Foo2 */*/ (selector-bem-pattern)',
+      message: 'Invalid component name in definition /*/** @define Foo2 */*/ (' + selectorBemPattern.ruleName + ')',
       line: 1,
       column: 1,
     },
     {
       code: '/** @define Foo */\n  .Foo-thing {}',
-      message: 'Invalid component selector ".Foo-thing" (selector-bem-pattern)',
+      message: 'Invalid component selector ".Foo-thing" (' + selectorBemPattern.ruleName + ')',
       line: 2,
       column: 3,
     },
@@ -75,13 +75,13 @@ testRule(selectorBemPattern.rule, {
   reject: [
     {
       code: '/** @define Foo */\n  .Foo-thing {}',
-      message: 'Invalid component selector ".Foo-thing" (selector-bem-pattern)',
+      message: 'Invalid component selector ".Foo-thing" (' + selectorBemPattern.ruleName + ')',
       line: 2,
       column: 3,
     },
     {
       code: '/** @define Foo */\n  .qz-Boooo-thing {}',
-      message: 'Invalid component selector ".qz-Boooo-thing" (selector-bem-pattern)',
+      message: 'Invalid component selector ".qz-Boooo-thing" (' + selectorBemPattern.ruleName + ')',
       line: 2,
       column: 3,
     },
@@ -96,7 +96,7 @@ testRule(selectorBemPattern.rule, {
   reject: [
     {
       code: 'a {}',
-      message: 'Expected option value for rule "selector-bem-pattern"',
+      message: 'Expected option value for rule "' + selectorBemPattern.ruleName + '"',
     },
   ],
 });

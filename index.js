@@ -3,7 +3,7 @@ var Result = require('postcss/lib/result');
 var stylelint = require('stylelint');
 var bemLinter = require('postcss-bem-linter');
 
-var ruleName = 'selector-bem-pattern';
+var ruleName = 'plugin/selector-bem-pattern';
 
 var optionsSchema = {
   preset: ['suit', 'bem'],
@@ -47,7 +47,7 @@ module.exports = stylelint.createPlugin(ruleName, function(options) {
         node: warning.node,
         line: warning.line,
         column: warning.column,
-        message: warning.text + ' (selector-bem-pattern)',
+        message: warning.text + ' (plugin/selector-bem-pattern)',
       });
     });
   };
