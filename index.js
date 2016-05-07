@@ -47,7 +47,7 @@ module.exports = stylelint.createPlugin(ruleName, function(options) {
         node: warning.node,
         line: warning.line,
         column: warning.column,
-        message: warning.text + ' (plugin/selector-bem-pattern)',
+        message: warning.text + ' (' + ruleName + ')',
       });
     });
   };
