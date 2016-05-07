@@ -1,6 +1,6 @@
 # Changelog
 
-## Head
+## 1.0.0
 
 - Namespace rule name.
 
