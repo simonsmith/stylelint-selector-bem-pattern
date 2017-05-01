@@ -17,7 +17,7 @@ var optionsSchema = {
     return true;
   }],
   implicitComponents: [_.isBoolean, _.isString, function(pattern) {
-    return _.isArray(patttern) && _.every(pattern, _.isString);
+    return _.isArray(pattern) && _.every(pattern, _.isString);
   }],
   utilitySelectors: [isStringOrRegExp],
   ignoreSelectors: [
