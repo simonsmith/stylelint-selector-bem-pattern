@@ -93,10 +93,9 @@ testRule(selectorBemPattern.rule, {
   config: null,
   skipBasicChecks: true,
 
-  reject: [
+  accept: [
     {
-      code: 'a {}',
-      message: 'Expected option value for rule "' + selectorBemPattern.ruleName + '"',
+      code: '/** @define Foo */\na {}',
     },
   ],
 });

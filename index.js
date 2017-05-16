@@ -7,7 +7,7 @@ var ruleName = 'plugin/selector-bem-pattern';
 
 var optionsSchema = {
   preset: ['suit', 'bem'],
-  presetOptions: function() { return true; }, // Can't currently validated `presetOptions`
+  presetOptions: function() { return true; }, // Can't currently validate `presetOptions`
   componentName: [isStringOrRegExp],
   componentSelectors: [function(pattern) {
     if (isStringOrFunction(pattern)) return true;
@@ -33,6 +33,7 @@ var optionsSchema = {
 
 module.exports = stylelint.createPlugin(ruleName, function(options) {
   return function(root, result) {
+    if (!options) return;
     var validOptions = stylelint.utils.validateOptions(result, ruleName, {
       actual: options,
       possible: optionsSchema,
