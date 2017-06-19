@@ -5,6 +5,12 @@ var bemLinter = require('postcss-bem-linter');
 
 var ruleName = 'plugin/selector-bem-pattern';
 
+var messages = stylelint.utils.ruleMessages(ruleName, {
+  rejected: function (warning) {
+    return warning;
+  },
+});
+
 var optionsSchema = {
   preset: ['suit', 'bem'],
   presetOptions: function() { return true; }, // Can't currently validate `presetOptions`
@@ -15,6 +21,9 @@ var optionsSchema = {
     if (!isStringOrFunction(pattern.initial)) return false;
     if (pattern.combined && !isStringOrFunction(pattern.combined)) return false;
     return true;
+  }],
+  implicitComponents: [_.isBoolean, _.isString, function(pattern) {
+    return _.isArray(pattern) && _.every(pattern, _.isString);
   }],
   utilitySelectors: [isStringOrRegExp],
   ignoreSelectors: [
@@ -45,10 +54,8 @@ module.exports = stylelint.createPlugin(ruleName, function(options) {
       stylelint.utils.report({
         ruleName: ruleName,
         result: result,
-        node: warning.node,
-        line: warning.line,
-        column: warning.column,
-        message: warning.text + ' (' + ruleName + ')',
+        node: warning.node || root,
+        message: messages.rejected(warning.text)
       });
     });
   };
