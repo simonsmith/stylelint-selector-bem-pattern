@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0
+
+- Supports `implicitComponents`.
+
 ## 1.0.0
 
 - Namespace rule name.
