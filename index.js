@@ -16,6 +16,9 @@ var optionsSchema = {
     if (pattern.combined && !isStringOrFunction(pattern.combined)) return false;
     return true;
   }],
+  implicitComponents: [_.isBoolean, _.isString, function(pattern) {
+    return _.isArray(pattern) && _.every(pattern, _.isString);
+  }],
   utilitySelectors: [isStringOrRegExp],
   ignoreSelectors: [
     isStringOrRegExp,
