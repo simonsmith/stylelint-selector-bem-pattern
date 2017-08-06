@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1
+
+- Supports `ignoreCustomProperties`.
+
 ## 1.1.0
 
 - Supports `implicitComponents`.

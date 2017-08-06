@@ -29,6 +29,15 @@ var optionsSchema = {
       return _.every(pattern, isStringOrRegExp);
     },
   ],
+  ignoreCustomProperties: [
+    isStringOrRegExp,
+    function(pattern) {
+      if (!_.isArray(pattern)) {
+        return isStringOrRegExp(pattern);
+      }
+      return _.every(pattern, isStringOrRegExp);
+    },
+  ],
 };
 
 module.exports = stylelint.createPlugin(ruleName, function(options) {
