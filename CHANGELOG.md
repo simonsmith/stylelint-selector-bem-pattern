@@ -2,7 +2,8 @@
 
 ## 1.1.1
 
-- Supports `ignoreCustomProperties`.
+- Support `ignoreCustomProperties`.
+- Use `root` for `implicitComponents` warning if no `node` is in the warning.
 
 ## 1.1.0
 
