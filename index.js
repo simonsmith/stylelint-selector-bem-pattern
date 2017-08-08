@@ -57,7 +57,7 @@ module.exports = stylelint.createPlugin(ruleName, function(options) {
       stylelint.utils.report({
         ruleName: ruleName,
         result: result,
-        node: warning.node,
+        node: warning.node || root,
         line: warning.line,
         column: warning.column,
         message: warning.text + ' (' + ruleName + ')',
