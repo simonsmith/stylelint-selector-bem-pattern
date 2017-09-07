@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0
+
+- Update `postcss-bem-linter` to `3.0.0`. See
+  [https://github.com/postcss/postcss-bem-linter/releases/tag/3.0.0](release
+  notes)
+
 ## 1.1.1
 
 - Support `ignoreCustomProperties`.
