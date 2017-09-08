@@ -4,8 +4,6 @@
 
 A [stylelint](https://github.com/stylelint/stylelint) plugin that incorporates [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter).
 
-**LOOKING FOR NEW MAINTAINERS!** I am no longer using this package myself, so would like to hand it over to someone who is actively using it. See #33.
-
 To learn more about postcss-bem-linter, please read [that module's documentation](https://github.com/postcss/postcss-bem-linter).
 
 ## Installation
