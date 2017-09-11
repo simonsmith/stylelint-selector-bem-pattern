@@ -1,6 +1,6 @@
 # stylelint-selector-bem-pattern
 
-[![Build Status](https://travis-ci.org/davidtheclark/stylelint-selector-bem-pattern.svg?branch=master)](https://travis-ci.org/davidtheclark/stylelint-selector-bem-pattern)
+[![Build Status](https://travis-ci.org/simonsmith/stylelint-selector-bem-pattern.svg?branch=master)](https://travis-ci.org/simonsmith/stylelint-selector-bem-pattern)
 
 A [stylelint](https://github.com/stylelint/stylelint) plugin that incorporates [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter).
 
