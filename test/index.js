@@ -99,3 +99,20 @@ testRule(selectorBemPattern.rule, {
     },
   ],
 });
+
+testRule(selectorBemPattern.rule, {
+  ruleName: selectorBemPattern.ruleName,
+  config: {
+    componentName: '^[a-z]+$',
+    componentSelectors: '^\\.{componentName}$',
+  },
+  skipBasicChecks: true,
+
+  accept: [
+    { code: '/** @define foo */ .foo { @include(example) }' },
+  ],
+
+  reject: [
+    { code: '/** @define foo */ .bar { @include(example) }' },
+  ],
+});
