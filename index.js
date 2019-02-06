@@ -19,6 +19,9 @@ var optionsSchema = {
   implicitComponents: [_.isBoolean, _.isString, function(pattern) {
     return _.isArray(pattern) && _.every(pattern, _.isString);
   }],
+  implicitUtilities: [_.isBoolean, _.isString, function(pattern) {
+    return _.isArray(pattern) && _.every(pattern, _.isString);
+  }],
   utilitySelectors: [isStringOrRegExp],
   ignoreSelectors: [
     isStringOrRegExp,
