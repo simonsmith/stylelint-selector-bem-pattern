@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0
+
+- Supports `implicitUtilities` [#38](https://github.com/simonsmith/stylelint-selector-bem-pattern/pull/38)
+
 ## 2.0.0
 
 - Update `postcss-bem-linter` to `3.0.0`. See
