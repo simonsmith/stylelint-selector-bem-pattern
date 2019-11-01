@@ -29,13 +29,13 @@
   },
   "homepage": "https://github.com/davidtheclark/stylelint-selector-bem-pattern#readme",
   "dependencies": {
-    "lodash": ">=3.10.0",
-    "postcss": ">=5.0.19",
-    "postcss-bem-linter": "^3.0.0",
-    "stylelint": ">=3.0.2"
+    "lodash": ">=4.17.15",
+    "postcss": ">=7.0.21",
+    "postcss-bem-linter": "^3.3.0",
+    "stylelint": ">=11.1.1"
   },
   "devDependencies": {
-    "eslint": "^1.10.3",
+    "eslint": "^6.6.0",
     "stylelint-test-rule-tape": "^0.2.0"
   }
 }
