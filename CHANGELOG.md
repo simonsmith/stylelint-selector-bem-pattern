@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.1
+
+- Bump dependencies to resolve warnings [#56](https://github.com/simonsmith/stylelint-selector-bem-pattern/pull/56)
+
 ## 2.1.0
 
 - Supports `implicitUtilities` [#38](https://github.com/simonsmith/stylelint-selector-bem-pattern/pull/38)
