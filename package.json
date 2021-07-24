@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidtheclark/stylelint-selector-bem-pattern.git"
+    "url": "git+https://github.com/simonsmith/stylelint-selector-bem-pattern.git"
   },
   "files": [
     "index.js"
@@ -25,9 +25,9 @@
   "author": "David Clark",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/davidtheclark/stylelint-selector-bem-pattern/issues"
+    "url": "https://github.com/simonsmith/stylelint-selector-bem-pattern/issues"
   },
-  "homepage": "https://github.com/davidtheclark/stylelint-selector-bem-pattern#readme",
+  "homepage": "https://github.com/simonsmith/stylelint-selector-bem-pattern#readme",
   "dependencies": {
     "lodash": ">=4.17.21",
     "postcss": "^8.3.6",
