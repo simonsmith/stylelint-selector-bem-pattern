@@ -1,6 +1,6 @@
 # stylelint-selector-bem-pattern
 
-[![Build Status](https://github.com/simonsmith/stylelint-selector-bem-pattern/actions/workflows/ci.yml/badge.svg)](https://github.com/simonsmith/stylelint-selector-bem-pattern/actions/workflows/ci.yml)
+[![NPM version](http://img.shields.io/npm/v/stylelint-selector-bem-pattern.svg)](https://www.npmjs.com/package/stylelint-selector-bem-pattern) [![Build Status](https://github.com/simonsmith/stylelint-selector-bem-pattern/actions/workflows/ci.yml/badge.svg)](https://github.com/simonsmith/stylelint-selector-bem-pattern/actions/workflows/ci.yml)
 
 A [stylelint](https://github.com/stylelint/stylelint) plugin that incorporates [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter).
 
