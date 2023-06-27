@@ -31,7 +31,7 @@
   "dependencies": {
     "lodash": ">=4.17.21",
     "postcss": "^8.3.6",
-    "postcss-bem-linter": "^3.3.0",
+    "postcss-bem-linter": "^4.0.0",
     "stylelint": ">=13.13.1"
   },
   "devDependencies": {
