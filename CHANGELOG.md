@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0
+
+- Update postcss-bem-linter to ^4.0.0
+- Update stylelint to ^15.9.0 - BREAKING CHANGE
+  - Drops support for Node 12
+
 ## 2.1.1
 
 - Bump dependencies to resolve warnings [#56](https://github.com/simonsmith/stylelint-selector-bem-pattern/pull/56)
