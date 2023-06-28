@@ -53,7 +53,7 @@ module.exports = stylelint.createPlugin(ruleName, function(options) {
     if (!validOptions) return;
 
     var bemLinterResult = new Result();
-    bemLinter(options)(root, bemLinterResult)
+    bemLinter(options).Once(root, { result: bemLinterResult })
     var bemLinterWarnings = bemLinterResult.warnings();
 
     bemLinterWarnings.forEach(function(warning) {

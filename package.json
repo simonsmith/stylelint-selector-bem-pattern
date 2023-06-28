@@ -30,9 +30,9 @@
   "homepage": "https://github.com/simonsmith/stylelint-selector-bem-pattern#readme",
   "dependencies": {
     "lodash": ">=4.17.21",
-    "postcss": "^8.3.6",
+    "postcss": "^8.4.24",
     "postcss-bem-linter": "^4.0.0",
-    "stylelint": ">=13.13.1"
+    "stylelint": ">=15.9.0"
   },
   "devDependencies": {
     "eslint": "^7.31.0",
