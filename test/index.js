@@ -1,13 +1,13 @@
-var testRule = require('stylelint-test-rule-tape');
-var selectorBemPattern = require('..');
+const selectorBemPattern = require('..');
+const ruleName = selectorBemPattern.ruleName;
 
 // Just a couple of quick tests to ensure postcss-bem-linter
 // is getting the hard work done
 
-testRule(selectorBemPattern.rule, {
-  ruleName: selectorBemPattern.ruleName,
-  config: { preset: 'suit' },
-  skipBasicChecks: true,
+testRule({
+  plugins: ['.'],
+  ruleName,
+  config: {preset: 'suit' },
 
   accept: [
     { code: '/** @define Foo */ .Foo {}' },
@@ -30,13 +30,13 @@ testRule(selectorBemPattern.rule, {
   ],
 });
 
-testRule(selectorBemPattern.rule, {
-  ruleName: selectorBemPattern.ruleName,
+testRule({
+  plugins: ['.'],
+  ruleName,
   config: {
     componentName: '^[a-zA-Z]+$',
     componentSelectors: '^\\.{componentName}---thing$',
   },
-  skipBasicChecks: true,
 
   accept: [
     { code: '/** @define Foo */\n  .Foo---thing {}' },
@@ -58,15 +58,15 @@ testRule(selectorBemPattern.rule, {
   ],
 });
 
-testRule(selectorBemPattern.rule, {
-  ruleName: selectorBemPattern.ruleName,
+testRule({
+  plugins: ['.'],
+  ruleName,
   config: {
     preset: 'suit',
     presetOptions: {
       namespace: 'qz',
     },
   },
-  skipBasicChecks: true,
 
   accept: [
     { code: '/** @define Foo */\n  .qz-Foo--thing {}' },
@@ -88,10 +88,10 @@ testRule(selectorBemPattern.rule, {
   ],
 });
 
-testRule(selectorBemPattern.rule, {
-  ruleName: selectorBemPattern.ruleName,
+testRule({
+  plugins: ['.'],
+  ruleName,
   config: null,
-  skipBasicChecks: true,
 
   accept: [
     {
