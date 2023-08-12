@@ -45,5 +45,9 @@
     "testMatch": [
       "**/test/*.js"
     ]
+  },
+  "volta": {
+    "node": "18.17.1",
+    "yarn": "1.22.19"
   }
 }
