@@ -1,5 +1,9 @@
 # Changelog
 
+# 3.0.1
+
+- Update postcss-bem-linter to ^4.0.1
+
 ## 3.0.0
 
 - Update postcss-bem-linter to ^4.0.0
