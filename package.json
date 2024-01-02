@@ -32,13 +32,16 @@
     "eslint-plugin-jest": "^27.2.2",
     "lodash": ">=4.17.21",
     "postcss": "^8.4.24",
-    "postcss-bem-linter": "^4.0.1",
-    "stylelint": ">=15.9.0"
+    "postcss-bem-linter": "^4.0.1"
   },
   "devDependencies": {
     "eslint": "^7.31.0",
     "jest": "^29.5.0",
-    "jest-preset-stylelint": "^6.1.0"
+    "jest-preset-stylelint": "^6.1.0",
+    "stylelint": "^15.9.0"
+  },
+  "peerDependencies": {
+    "stylelint": ">=15.9.0 || 16"
   },
   "jest": {
     "preset": "jest-preset-stylelint",
