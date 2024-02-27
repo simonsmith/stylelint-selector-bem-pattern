@@ -1,6 +1,13 @@
 # Changelog
 
-# 3.0.1
+## 4.0.0
+
+- Move stylelint to `peerDependencies`
+- Upgrade stylelint to ^16.2.0
+  This has required the package to move to ESM as required by stylelint
+  https://stylelint.io/migration-guide/to-16/#deprecated-commonjs-api
+
+## 3.0.1
 
 - Update postcss-bem-linter to ^4.0.1
 
