@@ -1,4 +1,4 @@
-const selectorBemPattern = require('..');
+import selectorBemPattern from '../index.js'
 const ruleName = selectorBemPattern.ruleName;
 
 // Just a couple of quick tests to ensure postcss-bem-linter

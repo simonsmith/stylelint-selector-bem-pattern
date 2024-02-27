@@ -1,7 +1,7 @@
-var _ = require('lodash');
-var Result = require('postcss/lib/result');
-var stylelint = require('stylelint');
-var bemLinter = require('postcss-bem-linter');
+import _ from 'lodash';
+import Result from 'postcss/lib/result';
+import stylelint from 'stylelint';
+import bemLinter from 'postcss-bem-linter';
 
 var ruleName = 'plugin/selector-bem-pattern';
 
@@ -43,7 +43,7 @@ var optionsSchema = {
   ],
 };
 
-module.exports = stylelint.createPlugin(ruleName, function(options) {
+export default stylelint.createPlugin(ruleName, function(options) {
   return function(root, result) {
     if (!options) return;
     var validOptions = stylelint.utils.validateOptions(result, ruleName, {

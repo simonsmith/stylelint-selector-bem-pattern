@@ -5,6 +5,9 @@
     "es6": true,
     "jest": true
   },
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "globals": {
     "testRule": "readonly"
   },
@@ -16,9 +19,13 @@
     "brace-style": 0,
     "comma-style": 2,
     "consistent-this": 0,
-    "indent": [2, 2, {
-      "SwitchCase": 1
-    }],
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
     "no-console": 0,
     "no-lonely-if": 2,
     "no-nested-ternary": 2,
@@ -28,7 +35,7 @@
     "keyword-spacing": [2, { "before": true }],
     "space-before-blocks": [2, "always"],
     "space-in-parens": [2, "never"],
-    "space-unary-ops": 2,
+    "space-unary-ops": 2
   },
   "plugins": ["jest"]
 }
