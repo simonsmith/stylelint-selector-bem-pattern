@@ -61,7 +61,6 @@ export default stylelint.createPlugin(ruleName, function(options) {
         ruleName: ruleName,
         result: result,
         node: warning.node || root,
-        line: warning.line,
         column: warning.column,
         message: warning.text + ' (' + ruleName + ')',
       });
