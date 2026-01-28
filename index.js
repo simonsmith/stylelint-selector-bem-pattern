@@ -1,67 +1,71 @@
-import _ from 'lodash';
 import Result from 'postcss/lib/result';
 import stylelint from 'stylelint';
 import bemLinter from 'postcss-bem-linter';
 
-var ruleName = 'plugin/selector-bem-pattern';
+const ruleName = 'plugin/selector-bem-pattern';
 
-var optionsSchema = {
+const isStringOrRegExp = (x) => typeof x === 'string' || x instanceof RegExp;
+const isStringOrFunction = (x) => typeof x === 'string' || typeof x === 'function';
+
+const optionsSchema = {
   preset: ['suit', 'bem'],
-  presetOptions: function() { return true; }, // Can't currently validate `presetOptions`
+  presetOptions: () => true, // Can't currently validate `presetOptions`
   componentName: [isStringOrRegExp],
-  componentSelectors: [function(pattern) {
+  componentSelectors: [(pattern) => {
     if (isStringOrFunction(pattern)) return true;
-    if (!pattern.initial) return false;
-    if (!isStringOrFunction(pattern.initial)) return false;
-    if (pattern.combined && !isStringOrFunction(pattern.combined)) return false;
-    return true;
+    if (!pattern.initial || !isStringOrFunction(pattern.initial)) return false;
+    return !pattern.combined || isStringOrFunction(pattern.combined);
   }],
-  implicitComponents: [_.isBoolean, _.isString, function(pattern) {
-    return _.isArray(pattern) && _.every(pattern, _.isString);
-  }],
-  implicitUtilities: [_.isBoolean, _.isString, function(pattern) {
-    return _.isArray(pattern) && _.every(pattern, _.isString);
-  }],
+  implicitComponents: [
+    (x) => typeof x === 'boolean',
+    (x) => typeof x === 'string',
+    (pattern) => Array.isArray(pattern) && pattern.every((x) => typeof x === 'string'),
+  ],
+  implicitUtilities: [
+    (x) => typeof x === 'boolean',
+    (x) => typeof x === 'string',
+    (pattern) => Array.isArray(pattern) && pattern.every((x) => typeof x === 'string'),
+  ],
   utilitySelectors: [isStringOrRegExp],
   ignoreSelectors: [
     isStringOrRegExp,
-    function(pattern) {
-      if (!_.isArray(pattern)) {
+    (pattern) => {
+      if (!Array.isArray(pattern)) {
         return isStringOrRegExp(pattern);
       }
-      return _.every(pattern, isStringOrRegExp);
+      return pattern.every(isStringOrRegExp);
     },
   ],
   ignoreCustomProperties: [
     isStringOrRegExp,
-    function(pattern) {
-      if (!_.isArray(pattern)) {
+    (pattern) => {
+      if (!Array.isArray(pattern)) {
         return isStringOrRegExp(pattern);
       }
-      return _.every(pattern, isStringOrRegExp);
+      return pattern.every(isStringOrRegExp);
     },
   ],
 };
 
-export default stylelint.createPlugin(ruleName, function(options) {
-  return function(root, result) {
+export default stylelint.createPlugin(ruleName, (options) => {
+  return (root, result) => {
     if (!options) return;
-    var validOptions = stylelint.utils.validateOptions(result, ruleName, {
+    const validOptions = stylelint.utils.validateOptions(result, ruleName, {
       actual: options,
       possible: optionsSchema,
     });
     if (!validOptions) return;
 
-    var bemLinterResult = new Result();
-    bemLinter(options).Once(root, { result: bemLinterResult })
-    var bemLinterWarnings = bemLinterResult.warnings();
+    const bemLinterResult = new Result();
+    bemLinter(options).Once(root, { result: bemLinterResult });
+    const bemLinterWarnings = bemLinterResult.warnings();
 
-    bemLinterWarnings.forEach(function(warning) {
-      var node = warning.node || root;
+    bemLinterWarnings.forEach((warning) => {
+      const node = warning.node || root;
       stylelint.utils.report({
-        ruleName: ruleName,
-        result: result,
-        node: node,
+        ruleName,
+        result,
+        node,
         index: 0,
         endIndex: node.selector !== undefined ? node.selector.length : 0,
         message: warning.text + ' (' + ruleName + ')',
@@ -69,11 +73,3 @@ export default stylelint.createPlugin(ruleName, function(options) {
     });
   };
 });
-
-function isStringOrRegExp(x) {
-  return _.isString(x) || _.isRegExp(x);
-}
-
-function isStringOrFunction(x) {
-  return _.isString(x) || _.isFunction(x);
-}
