@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ '24' ]
+        node: ["24"]
     name: Run tests on Node ${{ matrix.node }}
     steps:
       - name: Checkout repository
