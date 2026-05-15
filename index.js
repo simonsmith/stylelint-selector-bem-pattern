@@ -57,13 +57,13 @@ export default stylelint.createPlugin(ruleName, function(options) {
     var bemLinterWarnings = bemLinterResult.warnings();
 
     bemLinterWarnings.forEach(function(warning) {
+      var node = warning.node || root;
       stylelint.utils.report({
         ruleName: ruleName,
         result: result,
-        node: warning.node || root,
-        index: warning.node.source.start.offset,
-        endIndex: warning.node.source.end.offset,
-        column: warning.column,
+        node: node,
+        index: 0,
+        endIndex: node.selector !== undefined ? node.selector.length : 0,
         message: warning.text + ' (' + ruleName + ')',
       });
     });
