@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.0.0
+
+- Remove deprecated 'line' from utils.report [#77](https://github.com/simonsmith/stylelint-selector-bem-pattern/pull/77)
+- [BREAKING] Update stylelint to 17 [#79](https://github.com/simonsmith/stylelint-selector-bem-pattern/pull/79)
+
 ## 4.0.1
 
 - Move `eslint-plugin-jest` to `devDependencies`
