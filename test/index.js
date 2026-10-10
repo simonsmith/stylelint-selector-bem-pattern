@@ -1,11 +1,13 @@
 import selectorBemPattern from '../index.js'
+
+const plugins = [selectorBemPattern];
 const ruleName = selectorBemPattern.ruleName;
 
 // Just a couple of quick tests to ensure postcss-bem-linter
 // is getting the hard work done
 
 testRule({
-  plugins: ['.'],
+  plugins,
   ruleName,
   config: {preset: 'suit' },
 
@@ -31,7 +33,7 @@ testRule({
 });
 
 testRule({
-  plugins: ['.'],
+  plugins,
   ruleName,
   config: {
     componentName: '^[a-zA-Z]+$',
@@ -59,7 +61,7 @@ testRule({
 });
 
 testRule({
-  plugins: ['.'],
+  plugins,
   ruleName,
   config: {
     preset: 'suit',
@@ -89,7 +91,7 @@ testRule({
 });
 
 testRule({
-  plugins: ['.'],
+  plugins,
   ruleName,
   config: null,
 
